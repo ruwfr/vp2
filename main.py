@@ -86,23 +86,10 @@ if __name__ == "__main__":
             round(time_under_tension, 2),
         )
         with st.expander(EXPLANATION_TEXT):
-            rep_infos_explanation = {
-                "Training Goal": [
-                    "Strength",
-                    "Strength and Hypertrophy",
-                    "Hypertrophy",
-                ],
-                "Optimal Number of Repetitions": ["1-4", "5-7", "8-12"],
-                "Optimal Total Time under Tension [s]": ["2-20", "20-40", "40-70"],
-            }
-            st.dataframe(
-                pd.DataFrame(rep_infos_explanation).set_index(
-                    list(rep_infos_explanation.keys())[0]
-                )
-            )
-            st.markdown(
-                "[Source](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3285070/)"
-            )
+            st.markdown("""Time under Tension refers to the time a muscle is kept under tension during an exercise. 
+                        Higher Time under Tension has been associated with greater increases in rates of muscle protein synthesis than the same movement performed rapidly.)
+                        [Source](https://pubmed.ncbi.nlm.nih.gov/22106173/)
+                        """)
 
         st.plotly_chart(reps_fig)
         with st.expander(EXPLANATION_TEXT):
@@ -124,8 +111,8 @@ if __name__ == "__main__":
         with st.expander(EXPLANATION_TEXT):
             st.markdown(
                 """Allowing the knees to fall into valgus changes the stress that normally occurs across the knee joint, 
-            which can cause pain and increases the risk of injury.
-            [Source](https://www.trifectatherapeutics.com/blog/knees-caving-in-when-squattingjumping-heres-your-fix-for-knee-valgus)"""
+                which can cause pain and increases the risk of injury.
+                [Source](https://www.trifectatherapeutics.com/blog/knees-caving-in-when-squattingjumping-heres-your-fix-for-knee-valgus)"""
             )
 
         st.title("Depth")
@@ -141,8 +128,8 @@ if __name__ == "__main__":
             st.markdown(
                 """Focusing on range of motion in resistance training has been shown to increase strength and develop the muscles 
                 more effectively than when doing partial range of motion.
-            [Source](https://pubmed.ncbi.nlm.nih.gov/31230110)
-            [Source](https://journals.lww.com/nsca-jscr/fulltext/2012/08000/effect_of_range_of_motion_on_muscle_strength_and.17.aspx)"""
+                [Source](https://pubmed.ncbi.nlm.nih.gov/31230110)
+                [Source](https://journals.lww.com/nsca-jscr/fulltext/2012/08000/effect_of_range_of_motion_on_muscle_strength_and.17.aspx)"""
             )
 
         st.title("Hips before Shoulders")
